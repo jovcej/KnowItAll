@@ -1,0 +1,27 @@
+﻿@model dynamic
+
+<h3>ListOfOffers</h3>
+@if (Model == null)
+{
+    <p>Don't have Offers at the moment</p>
+}
+else
+{  
+    <table border="1">
+        <tr>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Time</th>
+            <th>Status</th>
+        </tr>
+        @foreach (var items in Model)
+        {    
+            <tr>
+                <td>@items.Quantity</td>
+                <td>@items.Price</td>
+                <td>@items.Time</td>
+                <td>@items.Status</td>   
+            </tr>
+        }
+    </table>
+}

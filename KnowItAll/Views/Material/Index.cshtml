@@ -1,0 +1,24 @@
+﻿@model dynamic
+
+<h3>Materials</h3>
+@if (Model == null)
+{   <p>Successfuly added new Material</p>
+    <a asp-controller="Material" asp-action="Add">Add</a>
+}
+else
+{
+    <a asp-controller="Material" asp-action="Add">Add</a>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+        </tr>
+        @foreach (var items in Model)
+        {
+            <tr>
+                <td>@items.Name</td>
+                <td>@items.Price</td>
+            </tr>
+        }
+    </table>
+}

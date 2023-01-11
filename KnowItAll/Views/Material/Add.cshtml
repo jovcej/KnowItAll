@@ -1,0 +1,20 @@
+﻿@model KnowItAll.Models.MaterialDto
+
+<h3>Add</h3>
+
+<form method="post" asp-controller="Material" asp-action="Add">
+    <table>
+        <tr>
+            <td>Name</td>
+            <td><input type="text" asp-for="Name" /></td>
+        </tr>
+        <tr>
+            <td>Price</td>
+            <td><input type="decimal" asp-for="Price" /></td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td><input type="submit" value="Save" /></td>
+        </tr>
+    </table>
+</form>
